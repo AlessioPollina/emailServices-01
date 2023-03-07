@@ -12,9 +12,9 @@ public class EmailService {
     private JavaMailSender emailSender;
 
 
-    public void sendTo(String contactId, String title, String text) {
+    public void sendTo(String email, String title, String text) {
         SimpleMailMessage sms = new SimpleMailMessage();
-        sms.setTo(contactId);
+        sms.setTo(email);
         sms.setSubject(title);
         sms.setText(text);
         emailSender.send(sms);
